@@ -2,6 +2,7 @@ import json
 import urllib.request
 import plotly.express as px
 import dateutil.parser
+from http.client import IncompleteRead
 
 def grab_resources():
 	resourceURL = "https://opendata.hullcc.gov.uk/dataset/30fd3969-556d-4eae-ae4c-f3f9d2cfa9e3/resource/90e1cce0-295e-4fa7-aa21-ebc4f3e8e8d4/download/scoot_loop_resources_full.json"
