@@ -9,7 +9,7 @@ The code in this repo grabs data from the HCC CKAN respository and creates a gra
 
 ## Build the graphs
 
-**getResources.py** builds a rubbishy html table index
+**getResources.py** builds a rubbishy html table index. Modify it so that it puts the index with the graphs (or change the href so it points where you want it to).
 
 **scootLoopGrab.py** grabs the last 3000 readings (edit the SQL to increase/reduce this) for each Scoot Loop published to the HCC CKAN respository and creates a graph for each Scoot Loop.
 
