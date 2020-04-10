@@ -16,7 +16,11 @@ for e in grab_resources():
 	print("Grabbing " + title)
 	sql = "SELECT * from \"" + e["resource_id"] + "\" ORDER BY _id desc LIMIT 3000"
 	url = sqlurl + urllib.parse.quote(sql)
-	data = urllib.request.urlopen(url)
+	try:
+		data = urllib.request.urlopen(url)
+	except IncompleteRead:
+		print("http client sent an incomplete read error. Trying again")
+		data = urlib.request.urlopen(url)
 	jsonData = json.loads(data.read())
 
 	result = jsonData.get('result')
