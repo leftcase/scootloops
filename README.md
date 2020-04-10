@@ -2,6 +2,8 @@
 
 The code in this repo grabs data from the HCC CKAN respository and creates a graph for each Scoot Loop on the computer running the script. You can then take these graphs and host them on a web server.
 
+See output of this script in action at https://hullscootloops.netlify.com. 
+
 ## To setup your environment
 1. install Python 3
 2. pip3 install plotly
