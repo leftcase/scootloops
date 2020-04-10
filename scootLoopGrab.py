@@ -13,7 +13,7 @@ def grab_resources():
 for e in grab_resources():
 	sqlurl = "https://opendata.hullcc.gov.uk/api/3/action/datastore_search_sql?sql="
 	currentResource = e["resource_id"]
-	title = e["description"]
+	title = re.sub("(- https.*$)", "\1", e["description"])
 	print("Grabbing " + title)
 	sql = "SELECT * from \"" + e["resource_id"] + "\" ORDER BY _id desc LIMIT 3000"
 	url = sqlurl + urllib.parse.quote(sql)
