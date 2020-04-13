@@ -8,6 +8,7 @@ See output of this script in action at https://hullscootloops.netlify.com.
 1. install Python 3
 2. pip3 install plotly
 3. pip3 install statsmodels
+4. pip3 install requests
 
 ## Build the graphs
 
@@ -15,7 +16,7 @@ See output of this script in action at https://hullscootloops.netlify.com.
 
 **scootLoopGrab.py** grabs the last 3000 readings (edit the SQL to increase/reduce this) for each Scoot Loop published to the HCC CKAN respository and creates a graph for each Scoot Loop.
 
-Create a cron job to run the code at regular intervals and copy the resultant html files into your public web directory. Be aware. Grabbing all scoot loop data from the CKAN server places considerable load on it. Grabbing all data can take a good hour or two. Run this script no more than once a day, and at a quiet time.
+Create a cron job to run the code at regular intervals and copy the resultant html files into your public web directory. Be aware. Grabbing all scoot loop data from the CKAN server places considerable load on it. Grabbing should take around half an hour or so.
 
 ## The software in this repository is released under the following licence
 
