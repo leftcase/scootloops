@@ -5,10 +5,11 @@ The code in this repo grabs data from the HCC CKAN respository and creates a gra
 See output of this script in action at https://hullscootloops.netlify.com. 
 
 ## To setup your environment
-1. install Python 3
-2. pip3 install plotly
-3. pip3 install statsmodels
-4. pip3 install requests
+1. apt-get install python3
+2. apt-get install python3-pip
+3. pip3 install plotly
+4. pip3 install statsmodels
+5. pip3 install requests
 
 ## Build the graphs
 
