@@ -14,7 +14,7 @@ See output of this script in action at https://hullscootloops.netlify.com.
 
 ## Build the graphs
 
-**getResources.py** builds a rubbishy html table index. Modify it so that it puts the index with the graphs (or change the href so it points where you want it to).
+**getResources.py** builds a rubbishy html table index. Modify it so that it puts the index with the graphs (or change the href so it points where you want it to). You can use map.py instead if you'd like a map of scoop loops rather than a list. 
 
 **map.py** builds a map of scoot loops using folium and leaflet. Popups for each marker link to graphs in the same directory.
 
