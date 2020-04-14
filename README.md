@@ -10,10 +10,13 @@ See output of this script in action at https://hullscootloops.netlify.com.
 3. pip3 install plotly
 4. pip3 install statsmodels
 5. pip3 install requests
+6. pip3 install folium
 
 ## Build the graphs
 
 **getResources.py** builds a rubbishy html table index. Modify it so that it puts the index with the graphs (or change the href so it points where you want it to).
+
+**map.py** builds a map of scoot loops using folium and leaflet. Popups for each marker link to graphs in the same directory.
 
 **scootLoopGrab.py** grabs the last 3000 readings (edit the SQL to increase/reduce this) for each Scoot Loop published to the HCC CKAN respository and creates a graph for each Scoot Loop.
 
