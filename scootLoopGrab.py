@@ -19,11 +19,16 @@ for e in grab_resources():
 	print("Grabbing " + title)
 	sql = "SELECT * from \"" + e["resource_id"] + "\" ORDER BY _id desc LIMIT 3000"
 	url = sqlurl + urllib.parse.quote(sql)
-	try:
-		data = requests.get(url, timeout = 5)
-	except:
-		print("Server didn't respond in a timely manner or sent less bytes than expected. Trying request again.")
-		data = requests.get(url, timeout = 5)
+	
+	for i in range(5): #Workaround network timeouts
+		try:
+			data = requests.get(url, timeout = 5)
+		except:
+			print("Server didn't respond in a timely manner or sent less bytes than expected. Trying request again.")
+			continue
+		else:
+			break
+
 	jsonData = json.loads(data.text)
 
 	result = jsonData.get('result')
